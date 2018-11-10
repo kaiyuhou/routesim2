@@ -27,7 +27,7 @@ For EECS-340, the murphy.wot.eecs.northwestern.edu machine does have Python 3 in
 ### Functions provide in Node class
     0. send_to_neighbors(m)  // send message to neighbors
     1. send_to_neighbor(neighbor, m) // send message to a neighbor
-    2. get_time()  // get current simulator time (I think maybe useful in Link_State, since I use it last year.)
+    2. get_time()  // get current simulator time
     3. link_has_been_updated() // will be called by simulator after processing every event in that second.
 
 ### Event commands:
@@ -40,9 +40,9 @@ For EECS-340, the murphy.wot.eecs.northwestern.edu machine does have Python 3 in
         e.g., 10 ADD_LINK 1 2 10
      3. [Time] DELETE_NODE [ID], # [ID] is any hashable value
         e.g., 10 DELETE_NODE 1
-     4. [Time] CHANGE_LINK [ID1] [ID2] [LATENCY], # will create a new node if does not exist
+     4. [Time] DELETE_LINK [ID1] [ID2] [LATENCY], # will create a new node if does not exist
         e.g., 10 CHANGE_LINK 1 2 10
-     5. [Time] DELETE_LINK [ID1] [ID2], # will send latency -1 to node1 and node 2
+     5. [Time] CHANGE_LINK [ID1] [ID2], # will send latency -1 to node1 and node 2
         e.g., 10 DELETE_LINK 1 2 10
 
      6. [Time] PRINT [Text]
